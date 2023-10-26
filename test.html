@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .progress-container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+  }
+</style>
+<title>진행 상태 게이지</title>
+</head>
+<body>
+
+<div class="progress-container">
+  <div class="progress-bar" id="progress">0%</div>
+</div>
+
+<script>
+  // 진행 상태 업데이트 함수
+  function updateProgress(progress) {
+    const progressBar = document.getElementById("progress");
+    progressBar.style.width = progress + "%";
+    progressBar.innerHTML = progress + "%";
+  }
+
+  // 가상의 진행 상태 업데이트 예시
+  let currentProgress = 0;
+  const targetProgress = 80; // 원하는 진행 상태 값
+  const increment = 1; // 진행 상태 증가량
+
+  function simulateProgress() {
+    if (currentProgress < targetProgress) {
+      currentProgress += increment;
+      updateProgress(currentProgress);
+      setTimeout(simulateProgress, 50); // 업데이트 주기 (밀리초)
+    }
+  }
+
+  simulateProgress(); // 진행 상태 시뮬레이션 시작
+</script>
+
+</body>
+</html>

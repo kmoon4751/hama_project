@@ -1,0 +1,133 @@
+  
+     .button {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px;
+        transition: background-color 0.3s ease;
+        width: 200px;
+        height: 50px;
+      }
+      .button.borderbutton{
+        margin-top: 50px;
+        font-size: 1.3rem;
+      }
+      .colorbutton {
+        background-color: rgb(0, 176, 250);
+        color: white;
+      }
+      .borderbutton{
+        border-radius: 5px;
+        border-color: rgb(0, 176, 450);
+        background-color: white;
+        color: rgb(0, 176, 250);
+        border: 1px solid;
+      }
+        :root {
+            --base-font-size: 16px;
+        }
+
+        body {
+            font-size: var(--base-font-size);
+        }
+
+        #content {
+            font-size: 10px; /* 1rem은 기본 글자 크기와 동일 */
+        }
+
+        .btn {
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+    
+        .underlined {
+            text-decoration: underline;
+        }
+
+
+ul{
+    list-style: none;
+}
+*{
+    /* outline: 1px solid red; */
+    padding: 0;
+    margin: 0;
+}
+.container__portfolio {
+    display: grid;
+    grid-template-areas: ". main .";
+    grid-template-columns: 1fr 1024px 1fr;
+}
+.main{
+    grid-area: main;
+    margin-top: 100px;
+    
+}
+.section{
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    border: 0.625px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.125);
+}
+.portfolio1{
+    padding: 25px;
+}
+.portfolio1 ul{ 
+    display: flex;
+    font-size:20px;
+    
+}
+.portfolio1 ul > *{
+    margin: 5px;
+} 
+.portfolio2{
+    padding: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    
+    font-size:20px;
+    height: 60px;
+}
+.portfolio2 .box1{
+    display: flex;
+}
+.portfolio2 .box1 .font{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio2 .box1 .font_size{
+    width: 20px;
+}
+.portfolio2 .box1 > * { 
+    margin: 5px;
+    width: 80px;
+}
+
+.portfolio3{
+    display: flex;
+    font-size:20px;
+    padding: 25px;
+    
+    
+}
+.portfolio4{
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+  }
+.portfolio_img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}

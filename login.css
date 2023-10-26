@@ -1,0 +1,107 @@
+*{
+    margin: 0; padding: 0;
+}
+
+
+.login__program{
+    display: flex;
+    justify-content: center;
+    height: 100vh; /*세로크기를 화면의 100%*/
+    align-items: center; /*y축 중앙 정렬*/
+}
+
+
+.login__program .form-wrap{
+    width: 300px;
+}
+
+
+/*블럭레벨인 form 태그를 세로로 나열하고 싶다면*/
+.login__program .form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login__program .form .form__row{
+    display: flex;
+    padding: 10px 10px;
+}
+
+/* 타이틀 */
+.login__program .form .form__row:nth-of-type(1){
+    justify-content: center;
+    object-fit : contain;
+    align-items: end;
+}
+
+/**/
+.login__program .form .form__row:nth-of-type(2),
+.login__program .form .form__row:nth-of-type(3){
+    border: 1px solid var(--color-bg1);
+    border-radius: 5px;
+
+    
+}
+
+/* 로그인 / 카카오톡 로그인 버튼 여백*/
+.login__program .form .form__row:nth-of-type(4),
+.login__program .form .form__row:nth-of-type(5){
+    padding: 5px 0;
+}
+
+/*아이디와 비밀번호의 아이콘 박스*/
+.login__program .form .form__row i{
+    margin-right: 10px;
+}
+
+/*아이디와 비밀번호 박스*/
+.login__program .form .form__row .from__item{
+    flex: 1; /*아이디와 비밀번호의 박스가 부모요소의 나머지 폭 공간을 차지*/
+    border: none; /* 평상시 외각선*/
+    outline: none; /* 클릭시 외각선 */
+}
+
+
+/*로그인 버튼*/
+.login__program .form-wrap .form .form__btn{
+    width: 100%;  /*버튼의 크기가 부모요소의 폭 100%*/
+    height: 40px;
+    padding: 5px;
+    color: var(--color-font1);
+    border: 1px solid var(--color-bg1);
+    background-color: var(--color-bg1);
+    font-weight: bolder; /*폰트 사이즈 굵게(숫자도 가능)*/
+}   
+
+/* 카카오톡 로그인 버튼. 카카오톡 API 로그인 연동 시 삭제 */
+.login__program .form-wrap .form .form__KAbtn{
+    width: 100%;  /*버튼의 크기가 부모요소의 폭 100%*/
+    height: 40px;
+    padding: 5px;
+    color: var(--color-font2);
+    border: 1px solid var(--color-bg2);
+    background-color: var(--color-bg2);
+    font-weight: bolder; /*폰트 사이즈 굵게(숫자도 가능)*/
+}
+
+.login__program .menu{
+    display: flex;
+    justify-content: space-around; /*부모컨테이너 안에서 가운데로*/
+    padding: 10px 0;
+    color: var(--color-font1);
+    font-size: 13px;
+}
+
+/*부모요소인 a의 위치를 잡아준다(가상요소인 딱지의 위치때문) */
+.login__program .menu .item a{
+    position: relative;
+}
+/*가상요소의 위치를 잡아주기 위해 포지션을 absolute로 하여 z축으로 던져버리면
+해당 가상요소는 스태틱이 아닌 부모요소의 위치를 따라가기 때문에(모든 부모요소들은 스태틱이 디폴트) 
+가상요소의 부모인 a태그의 위치를 잡아줘야한다. */
+
+/* 마우스를 올리면 밑줄이 생기게 */
+.login__program .menu .item:hover a{
+    text-decoration: underline var(--color-bg1);
+}

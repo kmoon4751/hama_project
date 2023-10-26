@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolioRegistration.css">
+    <script src="https://kit.fontawesome.com/a4d1ddc4db.js" crossorigin="anonymous"></script>
+    <title>글자 크기 조절 버튼</title>
+    
+  
+</head>
+
+<body>
+
+    <div class="container__portfolio">
+
+        <div class="main">
+            <div class="section">
+                <div class="portfolio1">
+                    <ul>
+                        <div class="portfolio_img">
+                            <i class="fa-solid fa-image fa-5x"></i>
+                            <a href="#">사진</a>
+                        </div>
+                
+                        <div class="portfolio_img">
+                            <i class="fa-solid fa-link fa-5x"></i>
+                            <a href="#">링크</a>
+                        </div>
+                
+                
+                        <div class="portfolio_img">
+                            <i class="fa-regular fa-folder fa-5x"></i>
+                            <a href="#">파일</a>
+                        </div>
+                </div>
+                
+                <div class="portfolio2">
+                    <div class="box1">
+                        <div class="font">기본서체</div>
+                            <div class="font_size">
+                                <div>
+                                    <button id="increaseBtn">▲</button>
+                                </div>
+                                <div>
+                                    <button id="decreaseBtn">▼</button>
+                                </div>
+                            </div>
+                            <button id="boldButton">B</button>
+                            <button id="underlineButton">밑줄 토글</button>
+                            <button id="alignLeftButton">왼쪽 정렬</button>
+                            <button id="alignCenterButton">가운데 정렬</button>
+                            <button id="alignRightButton">오른쪽 정렬</button>
+                        
+                    </div>
+                </div>
+                
+                <div class="portfolio3">
+                      <div id="content">
+                        <!-- 게시판 내용이 들어갈 자리 -->
+                        <p>내용을 입력하세요. Lorem ipsum, dolor sit amet 
+                            consectetur adipisicing elit. Commodi aliquam aspernatur possimus 
+                            placeat necessitatibus ipsum, iste accusamus voluptatum repudiandae 
+                            veritatis, dolorum praesentium illum similique harum animi? Voluptatum 
+                            itaque perferendis Lorem ipsum, dolor sit amet consectetur adipisicing 
+                            elit. Nostrum repudiandae velit, optio deserunt quidem modi 
+                            molestias facilis numquam ullam nulla maxime suscipit voluptate, 
+                            possimus dicta temporibus mollitia distinctio. Nam, labore?
+                
+                
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est 
+                            porro deleniti, assumenda dolores culpa libero veniam unde, soluta 
+                            fuga quia dolor rem cumque rerum commodi vero cupiditate! Iure, 
+                            dignissimos!.</p>
+                    </div>
+                    
+                   
+                    
+                    
+                    <script>
+                        const contentElement = document.getElementById('content');
+                        const increaseBtn = document.getElementById('increaseBtn');
+                        const decreaseBtn = document.getElementById('decreaseBtn');
+                        const underlineButton = document.getElementById('underlineButton');
+                        const boldButton = document.getElementById('boldButton');
+                        const alignLeftButton = document.getElementById('alignLeftButton');
+                        const alignCenterButton = document.getElementById('alignCenterButton');
+                        const alignRightButton = document.getElementById('alignRightButton');
+                
+                        let currentFontSize = 16; // 초기 글자 크기
+                        let isBold = false;
+                
+                        increaseBtn.addEventListener('click', () => {
+                            currentFontSize += 2; // 글자 크기 2px 증가
+                            contentElement.style.fontSize = `${currentFontSize}px`;
+                        });
+                
+                        decreaseBtn.addEventListener('click', () => {
+                            currentFontSize -= 2; // 글자 크기 2px 감소
+                            contentElement.style.fontSize = `${currentFontSize}px`;
+                        });
+                
+                        underlineButton.addEventListener('click', () => {
+                            contentElement.classList.toggle('underlined');
+                        });
+                
+                        boldButton.addEventListener('click', () => {
+                            if (isBold) {
+                                contentElement.style.fontWeight = 'normal';
+                            } else {
+                                contentElement.style.fontWeight = 'bold';
+                            }
+                            isBold = !isBold;
+                        });
+                
+                        alignLeftButton.addEventListener('click', () => {
+                            contentElement.style.textAlign = 'left';
+                        });
+                
+                        alignCenterButton.addEventListener('click', () => {
+                            contentElement.style.textAlign = 'center';
+                        });
+                
+                        alignRightButton.addEventListener('click', () => {
+                            contentElement.style.textAlign = 'right';
+                        });
+                    </script>
+                </div>
+            </div>
+            
+            <div class="portfolio4">
+                <div class="button borderbutton">등록</div>
+            </div>
+        </div>
+        
+
+        </div>
+
+        <!-- ... (기존 내용) ... -->
+    </div>
+</body>
+
+</html>

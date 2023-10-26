@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/font.css" />
+    <link rel="stylesheet" href="/hama/btn.css" />
+  </head>
+  <style>
+    * {
+      outline: 1px solid red;
+    }
+
+    body {
+      background-color: #f9fbfc;
+    }
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        ". main .";
+      grid-template-columns: 1fr 824px 1fr;
+    }
+    .header {
+      box-shadow: 0 5px 8px -6px #222;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .header,
+    .content_top {
+      background-color: white;
+    }
+    .header {
+      grid-area: header;
+    }
+    .header .main_title {
+      margin-right: 600px;
+    }
+    .main {
+      grid-area: main;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .main .main_title {
+      align-self: self-start;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+    .content_top,
+    .content_bottom {
+      margin-top: 40px;
+      border-radius: 16px;
+      border: 2px solid rgb(0, 176, 250);
+      width: 80%;
+      height: auto;
+      padding: 20px;
+    }
+    .content_top .first_top {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #f2f2f2;
+    }
+
+    /* 내 프로필 글자 */
+    .content_top .top_title {
+      margin-bottom: 10px;
+      color: rgba(123, 137, 148, 0.8);
+    }
+  
+    .content_top .pic_nickname {
+      display: flex;
+      padding: 10px;
+    }
+    .content_top .pic,
+    .content_top .pic img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-right: 20px;
+    }
+    .content_top .pic_nickname .nick_id {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .content_top .pic_nickname .nick_id .nickname {
+      font-size: 1.4rem;
+    }
+    .content_top .pic_nickname .nick_id .id_value {
+      color: rgba(123, 137, 148, 0.8);
+    }
+    .content_top .phone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 2px solid #f2f2f2;
+    }
+    .content_top .phone .phone_img img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    /* 여기부터 밑에 내용들 */
+    .content_bottom {
+      border: 2px solid rgba(123, 137, 148, 0.8);
+    }
+    .content_bottom .bottom_title {
+      color: rgba(123, 137, 148, 0.8);
+    }
+    .content_bottom .bottom_first .pw_btn .button {
+      width: 130px;
+    }
+    .content_bottom .bottom_first .pw_btn {
+      display: flex;
+      justify-content: end;
+      padding: 15px;
+    }
+    .content_bottom .bottom_first .update_pic,
+    .content_bottom .bottom_first .update_email,
+    .content_bottom .bottom_first .update_nickname,
+    .content_bottom .bottom_first .update_phone {
+      border-bottom: 2px solid #f2f2f2;
+      padding: 15px;
+    }
+    .content_bottom .bottom_first .update_pic > * {
+      width: 30%;
+    }
+    .value {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .input {
+      display: flex;
+    }
+    input {
+      padding: 5px;
+      text-align: end;
+      width: 300px;
+      height: 32px;
+      font-size: 1.1rem;
+      border: 0;
+      border-radius: 15px;
+      outline: none;
+      padding-left: 10px;
+      background-color: rgb(233, 233, 233);
+    }
+    .content_finish {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 80%;
+      display: flex;
+      justify-content: end;
+      align-items: end;
+    }
+    .content_finish .cus_delete {
+      margin-left: 80px;
+      color: rgba(123, 137, 148, 0.8);
+    }
+    .nickbtn {
+      width: 100px;
+      height: 30px;
+    }
+    .nickbtn .bottom.password {
+      width: 150px;
+    }
+    .cus_delete {
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="main_title"><h1>회원정보수정</h1></div>
+      </div>
+      <div class="main">
+        <div class="content_top">
+          <div class="top_title">내 프로필</div>
+
+          <div class="first_top" style="background-color: aqua">
+            <div class="pic_nickname" style="background-color: yellowgreen">
+              <div class="pic">
+                <img src="/iamge/반려/미용.jpg" alt="" />
+              </div>
+              <div class="nick_id">
+                <div class="nickname">별명</div>
+                <div class="id_value">hama2team@hwaiting.com</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone">
+            <div class="phone_img">
+              <!-- <img src="/hama/img/account.png" alt="" /> -->
+            </div>
+            <div class="phone-num">hama2tema@legend.com</div>
+          </div>
+          
+          <!-- 하마회원이 아닐 시 표시되지 않음 = 주마회원은 휴대폰인증을 하지 않는다. -->
+          <div class="phone">
+            <div class="phone_img">
+              <!-- <img src="/hama/img/phone.png" alt="" /> -->
+            </div>
+            <div class="phone-num">010-1234-5678</div>
+          </div>
+        </div>
+
+        <div class="content_bottom">
+          <div class="bottom_title">수정</div>
+          <div class="bottom_first">
+
+            <div class="update_pic">
+              <button class="button colorbutton update">사진 변경</button>
+              <button class="button colorbutton delete">삭제</button>
+            </div>
+
+            <div class="value update_nickname">
+              <div class="nickname_form_title">별명 :</div>
+              <div class="input nick_form">
+                <div class="nickname_form">
+                  <input type="text" class="inner" />
+                </div>
+                <button class="button borderbutton bottom nick">수정</button>
+              </div>
+            </div>
+            <!-- <div class="value update_nickname">
+              <div class="nickname_form_title">전화번호 :</div>
+              <div class="input nick_form">
+                <div class="nickname_form">
+                  <input type="text" class="inner" />
+                </div>
+              </div>
+            </div>
+            <div class="value update_nickname">
+              <div class="nickname_form_title">이메일 :</div>
+              <div class="input nick_form">
+                <div class="nickname_form">
+                  <input type="text" class="inner" />
+                </div>
+              </div> -->
+            </div>
+            <div class="value update_nickname">
+              <div class="nickname_form_title">비밀번호 :</div>
+              <div class="input nick_form">
+                <div class="nickname_form">
+                  <input type="password" class="inner" />
+                </div>
+              </div>
+            </div>
+            <div class="value update_nickname">
+              <div class="nickname_form_title">비밀번호 확인 :</div>
+              <div class="input nick_form">
+                <div class="nickname_form">
+                  <input type="password" class="inner" />
+                </div>
+              </div>
+            </div>
+            <div class="pw_btn">
+              <button class="button borderbutton bottom password">
+                비밀번호수정
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content_finish">
+          <!-- <div class="update_finish"><button class="button borderbutton update">수정완료</button></div> -->
+          <div class="cus_delete">회원탈퇴</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const $run = document.querySelector(".cus_delete");
+
+      $run.addEventListener("click", (e) => {
+        let sign = prompt(
+          "정말 회원탈퇴를 하시겠습니까? \n회원탈퇴를 원하시면 빈칸에 (회원탈퇴/본인아이디)를 입력해주세요."
+        );
+
+        if (sign.toLowerCase() === "회원탈퇴/본인아이디") {
+          alert("정상적으로 회원탈퇴 되었습니다.");
+        }
+      });
+    </script>
+
+  </body>
+</html>

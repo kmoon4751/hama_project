@@ -1,0 +1,234 @@
+/* * {
+    outline: 1px solid plum;
+} */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 그리드로 영역지정 */
+.convenient__facilities{ 
+    display: grid;
+    grid-template-areas: 
+                         "header header header"
+                         ". main ."
+                         "footer footer footer";
+    grid-template-columns: 1fr 1024px 1fr;
+}
+
+/* 헤더 */
+.header{
+    grid-area: header;
+}
+
+/* 전체 main 박스 */
+.convenient__facilities__main{
+    grid-area: main;
+}
+/* 푸터 */
+.footer{
+    grid-area: footer;
+}
+
+/*왼쪽메뉴박스와 api이미지 박스 중앙정렬*/
+.convenient__facilities__main{
+    display: flex;
+    justify-content: center;
+
+    height: 800px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* 검색창 */
+.convenient__facilities__var__search__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+/* 위치 검색 아이콘 크기조절 */
+.fa-solid.fa-magnifying-glass-location{
+    font-size: 2.8rem;
+}
+
+/* 위치 검색 아이콘 버튼 배경색+테두리 제거 */
+.convenient__facilities__var__search__form button {
+    background: none; 
+    border: none; 
+    cursor: pointer;
+}
+
+/* 위치 검색창 모양*/
+.convenient__facilities__var__search__form__input{
+    border: none;
+    border-radius: 5px;
+
+    /*위치 검색창 가로길이*/
+    width: 200px;
+
+    border: 2px solid transparent; 
+    margin: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    height : 20px auto;
+}
+
+/* 아이콘+텍스트 박스 가로정렬과 크기조절 */
+.convenient__facilities__var__icon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /*아이콘+텍스트 크기 조절*/
+    font-size: 2rem;
+
+    height: 15%;
+
+}
+
+/* 아이콘+텍스트 중앙정렬과 사이여백 */
+.convenient__facilities__toilet,
+.convenient__facilities__store{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+}
+
+
+/* 아이콘 및 텍스트 호버 효과 */
+.convenient__facilities__toilet:hover,
+.convenient__facilities__store:hover {
+    /* 배경색상 변경 */
+    background-color: #eee; 
+    /* 텍스트 색상 변경 */
+    color: #333; 
+    /* 모서리 둥글게 */
+    border-radius: 10px;
+}
+
+
+.convenient__facilities__var{
+    width: 40;
+
+}
+
+.map_wrap{
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+.map_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/*스크롤*/
+/*스크롤 박스 중앙정렬*/
+.container__var__scroller{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*스크롤 박스 내용 정렬*/
+.container__var__scroller__infor {
+    margin-top: 50px;
+    height: 400px;
+    width: 300px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    outline: 1px solid #eee;
+}
+
+.container__var__scroller__infor section {
+    scroll-snap-align: start;
+}
+
+
+  #map {
+    width:100vw;
+    height:100vh;
+  }
+
+  /*내 위치*/
+  #whereiam{
+    position: absolute;
+    
+    z-index: 1010;
+    width: 100px;
+    height: 15px;
+    background-color: whitesmoke;
+    border: none;
+  }
+
+  .marker {
+    width:12px;height:12px;
+    background-color: rgba(255,0,0,.3);
+    border-radius: 50%;
+  }
+  .info-win {
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    font-size: 0.8rem;
+    border-radius: 10%;
+  }
+
+  .info-win .title{
+    font-weight: bolder;
+  }
+
+
+  .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
+  .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
+  .map_wrap {position:relative;width:100%;height:100%;}
+  
+  #menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
+ 
+  .bg_white {background:#fff;}
+
+  #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
+  #menu_wrap .option{text-align: center;}
+  #menu_wrap .option p {margin:10px 0;}  
+  #menu_wrap .option button {margin-left:5px;}
+
+  #placesList li {list-style: none;}
+  #placesList .item {position:relative;border-bottom:1px solid #888;overflow: hidden;cursor: pointer;min-height: 65px;}
+  #placesList .item span {display: block;margin-top:4px;}
+  #placesList .item h5, #placesList .item .info {text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+  #placesList .item .info{padding:10px 0 10px 55px;}
+  #placesList .info .gray {color:#8a8a8a;}
+  #placesList .info .jibun {padding-left:26px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;}
+  #placesList .info .tel {color:#009900;}
+  #placesList .item .markerbg {float:left;position:absolute;width:36px; height:37px;margin:10px 0 0 10px;background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;}
+  
+  /* 왼쪽 목록의 마커 위치 */
+  #placesList .item .marker_1 {background-position: 0 -10px;}
+  #placesList .item .marker_2 {background-position: 0 -56px;}
+  #placesList .item .marker_3 {background-position: 0 -102px}
+  #placesList .item .marker_4 {background-position: 0 -148px;}
+  #placesList .item .marker_5 {background-position: 0 -194px;}
+  #placesList .item .marker_6 {background-position: 0 -240px;}
+  #placesList .item .marker_7 {background-position: 0 -286px;}
+  #placesList .item .marker_8 {background-position: 0 -332px;}
+  #placesList .item .marker_9 {background-position: 0 -378px;}
+  #placesList .item .marker_10 {background-position: 0 -423px;}
+  #placesList .item .marker_11 {background-position: 0 -470px;}
+  #placesList .item .marker_12 {background-position: 0 -516px;}
+  #placesList .item .marker_13 {background-position: 0 -562px;}
+  #placesList .item .marker_14 {background-position: 0 -608px;}
+  #placesList .item .marker_15 {background-position: 0 -654px;}
+  
+  #pagination {margin:10px auto;text-align: center;}
+  #pagination a {display:inline-block;margin-right:10px;}
+  #pagination .on {font-weight: bold; cursor: default;color:#777;}

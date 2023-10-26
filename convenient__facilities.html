@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>편의시설</title>
+
+    <!--아이콘-->
+    <script src="https://kit.fontawesome.com/ba16334cfd.js" crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="./header.css">
+    <link rel="stylesheet" href="./footer_color.css">
+    <link rel="stylesheet" href="./footer_style.css">
+    <link rel="stylesheet" href="./btn.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./convenient__facilities.css">
+
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=943f1df4507ed8b8301aba42e152caae&libraries=services,clusterer,drawing"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ps74d8pox5"
+    ></script>
+
+</head>
+
+<body>
+    <!--편의시설 전체(헤더+메인+푸터)박스-->
+    <div class="convenient__facilities">
+
+        <!-- 헤더 시작 -->
+        <div class="header">
+            <div class="headers">
+            <div class="logo_loggo">
+    
+         <!-- logo / 로고 -->
+         <div class="logo"
+            onclick="location.href='http://192.168.0.182:5500/project/index/index.html'"
+            style="cursor: pointer;"><img src="./img/logo.png" width="140px" height="70px"></div>
+         </div>
+    
+         <!-- 로고 옆 gnb 커뮤니티,채팅 등등 -->            
+         <div class="gnb">
+            <ul class="menu__headers">
+
+             <!-- 일을주마 -->
+                <li>
+                   <a href="#">일을주마</a>
+                   <ul class="depth_1">
+                       <li><a href="#">견적요청</a></li>
+                   </ul>
+                </li>
+
+              <!-- 일을하마 -->
+                <li>
+                   <a href="#">일을하마</a>
+                   <ul class="depth_1">
+                       <li><a href="#">요청게시판</a></li>
+                   </ul>
+                </li>
+             <!-- 커뮤니티 -->
+                <li>
+                  <a href="#">커뮤니티</a>
+                </li>
+             <!-- 하마찾기 -->
+                <li>
+                  <a href="#">하마찾기</a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- 로그인,회원가입  -->
+        <div class="login_signup">
+            <div></div>
+            <div class="login" onclick="location.href='http://192.168.0.182:5500/project/login/login.html'"style="cursor: pointer;">받은요청</div>
+            <div class="login" onclick="location.href='http://192.168.0.182:5500/project/login/signup.html'"style="cursor: pointer;">보낸견적</div>
+            <div class="login" onclick="location.href='http://192.168.0.182:5500/project/login/signup.html'"style="cursor: pointer;">채팅</div>
+            <div class="login2"style="cursor: pointer;">
+                <li>
+                    <a href="#"><i class="fa-solid fa-user"></i></i></a>
+                    <ul class="depth_1">
+                        <li><p>회원관리</p></li>
+                        <li><a href="#">하마신청</a></li>
+                        <li><a href="#">프로필등록</a></li> 
+                        <li><a href="#">회원정보수정</a></li>
+                        <li><a href="#">회원탈퇴</a></li>
+                        <li><p>하마전용</p></li>
+                        <li><a href="#">포트폴리오</a></li>
+                    </ul>
+                 </li></div>
+            
+            </div>
+        </div>
+        </div>
+
+        <!-- main 박스 -->
+        <div class="convenient__facilities__main">
+
+            <!-- 왼쪽 메뉴박스-->
+            <div class="convenient__facilities__var">
+
+                <!-- 검색창 -->
+                <div class="convenient__facilities__var__search">
+                    <search class="convenient__facilities__var__search__form">
+                            <!--위치 직접 검색-->
+                            <input 
+                                type="text" 
+                                class="convenient__facilities__var__search__form__input" 
+                                placeholder="위치 검색"/> 
+
+                                <!-- 검색 아이콘 버튼 -->
+                                <button><a href="#"><i class="fa-solid fa-magnifying-glass-location"></i></a></button> 
+                    </search>
+                </div>
+            
+                <!-- 아이콘 -->
+                <div class="convenient__facilities__var__icon">
+            
+                    <!--화장실-->
+                    <a class="link_style" href="#">
+                        <div class="convenient__facilities__toilet">
+                            <i class="fa-solid fa-restroom"></i>
+                            <div>화장실</div>
+                        </div>
+                    </a>
+            
+                    <!--편의점-->
+                    <a class="link_style" href="#">
+                        <div class="convenient__facilities__store">
+                            <i class="fa-solid fa-shop"></i>
+                            <div>편의점</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 지도 정보 -->
+                <div class="container__var__scroller">
+                    <article class="container__var__scroller__infor">
+                        <section>
+                            <h1>함께 화장실</h1>
+                            <p>울산 남구 달동</p>
+                            <p>000번지</p>
+                            <br>
+                        </section>
+                    
+                        <section>
+                            <h1>하마 화장실</h1>
+                            <p>울산 남구 달동</p>
+                            <p>000번지</p>
+                            <br>
+                        </section>
+                    
+                        <section>
+                            <h1>주마 화장실</h1>
+                            <p>울산 남구 달동</p>
+                            <p>000번지</p>
+                            <br>
+                        </section>
+                    
+                        <section>
+                            <h1>가나 화장실</h1>
+                            <p>울산 남구 달동</p>
+                            <p>000번지</p>
+                            <br>
+                        </section>
+                    
+                        <section>
+                            <h1>다라 화장실</h1>
+                            <p>울산 남구 달동</p>
+                            <p>000번지</p>
+                            <br>
+                        </section>
+                    
+                        <section>
+                            <h1>마바 화장실</h1>
+                            <p>울산 남구 달동</p>
+                            <p>000번지</p>
+                            <br>
+                        </section>
+                    
+                        <section>
+                            <h1>사아 화장실</h1>
+                            <p>울산 남구 달동</p>
+                            <p>000번지</p>
+                            <br>
+                        </section>
+                    
+                        <section>
+                            <h1>자차 화장실</h1>
+                            <p>울산 남구 달동</p>
+                            <p>000번지</p>
+                            <br>
+                        </section>
+                    </article>
+                </div>
+                
+            </div>
+                
+            <!--지도 api-->
+            
+            <div class="map_box">
+                <div class = "convenient__facilities__map">
+                    <div id="map" style="width:100%;height:100%;"></div>
+                </div>
+            </div>
+
+
+ 
+        </div>
+
+        <!-- 푸터시작 -->
+        <div class="footer">
+            <div class="f1"></div>
+            <div class="f2"></div>
+           
+            <!--푸터 바디-->
+            <div class="footer__body">
+    
+                <!--이용약관 개인정보처리방침 자주묻는질문 공지사항 광고문의-->
+                    <div class = "menu__footer">
+                        <p><a href="#">이용약관</a></p>
+                        <p><a href="#">개인정보처리방침</a></p>
+                        <p><a href="#">자주 묻는 질문</a></p>
+                        <p><a href="#">공지사항</a></p>
+                        <p><a href="#">광고문의</a></p>
+                    </div>
+                
+    
+                <!--푸터 바디 속 컨텐츠 시작-->
+                <div class="footer__content">
+                    
+                    <!--박스1-->
+                    <div class="footer__content3">
+                        <p class="title">사업자 등록번호 : 111-77-123456</p>
+                        <p>우아한하마들(주) 대표팀장 정인수</p>
+                        <p>개인정보관리책임자:정인수</p>
+                    </div>
+    
+                    <!--박스2-->
+                    <div class="footer__content4">
+                        <p>평일:오전 10:00 ~ 오후 18:00</p>
+                        <p>점심:오후 12:00 ~ 오후 13:00</p>
+                        <p>토/일/공휴일 휴무</p>
+                        <p>TEL : 123-456-7890</p>
+                    </div>
+                    
+                </div><!--푸터 바디 속 컨텐츠 끝-->
+    
+                <!--카피라이트-->
+                <div class="footer__copyright">
+                    COPYRIGHT ⓒ 우아한하마들(주) COMPANY. ALL RIGHTS RESERVED.
+                </div>
+    
+             </div>
+        </div>   
+        
+    </div>
+
+    <!-- 지도 자바 -->
+    <script>
+
+
+    </script>
+        
+</body>
+        
+</html>
+    
+    <!--
+        promise
+        비동기 로직을 처리하고 처리결과를 promise 객체에 담아 반환
+        callback 함수 
+        resolve : 비동기로직을 성공적으로 처리했을 때의 결과값을 매개값으로 받는다.
+        reject : 비동기로직의 결과가 실패했을 때
+        
+    -->
+    
